@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A08AF33E-D0A3-4C43-A71E-777DADDAC555}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Matrix</RootNamespace>
+    <AssemblyName>Matrix</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Collections\Queue.ts" />
+    <TypeScriptCompile Include="Collections\Stack.ts" />
+    <TypeScriptCompile Include="Copy.ts" />
+    <TypeScriptCompile Include="IEvent.ts" />
+    <TypeScriptCompile Include="JidEventArgs.ts" />
+    <TypeScriptCompile Include="Net\BoshSocket.ts" />
+    <TypeScriptCompile Include="Net\WebRequest.ts" />
+    <TypeScriptCompile Include="Net\WebRequestEventArgs.ts" />
+    <TypeScriptCompile Include="Sasl\AnonymousProcessor.ts" />
+    <TypeScriptCompile Include="TextEventArgs.ts" />
+    <TypeScriptCompile Include="Transport.ts" />
+    <TypeScriptCompile Include="Util\Functions.ts" />
+    <TypeScriptCompile Include="Util\Time.ts" />
+    <TypeScriptCompile Include="Util\Timer.ts" />
+    <TypeScriptCompile Include="Xmpp\Base\Item.ts" />
+    <TypeScriptCompile Include="Xmpp\Base\RosterItem.ts" />
+    <TypeScriptCompile Include="Xmpp\Base\XmppXElementWithAddressAndIdAndVersion.ts" />
+    <TypeScriptCompile Include="Xmpp\Base\XmppXElementWithJidAttribute.ts" />
+    <TypeScriptCompile Include="Xmpp\Bind\Bind.ts" />
+    <TypeScriptCompile Include="Xmpp\Bosh\Body.ts" />
+    <TypeScriptCompile Include="Xmpp\Bosh\Condition.ts" />
+    <TypeScriptCompile Include="Xmpp\Bosh\Type.ts" />
+    <TypeScriptCompile Include="Xmpp\Client\IqQuery.ts" />
+    <TypeScriptCompile Include="Xmpp\Delay\Delay.ts" />
+    <TypeScriptCompile Include="Xmpp\Framing\Close.ts" />
+    <TypeScriptCompile Include="Xmpp\Framing\Open.ts" />
+    <TypeScriptCompile Include="Xmpp\Muc\Affiliation.ts" />
+    <TypeScriptCompile Include="Xmpp\Muc\Conference.ts" />
+    <TypeScriptCompile Include="Xmpp\Muc\History.ts" />
+    <TypeScriptCompile Include="Xmpp\Muc\Item.ts" />
+    <TypeScriptCompile Include="Xmpp\Muc\Role.ts" />
+    <TypeScriptCompile Include="Xmpp\Muc\User\Actor.ts" />
+    <TypeScriptCompile Include="Xmpp\Muc\User\Continue.ts" />
+    <TypeScriptCompile Include="Xmpp\Muc\User\Status.ts" />
+    <TypeScriptCompile Include="Xmpp\Muc\User\StatusCode.ts" />
+    <TypeScriptCompile Include="Xmpp\Muc\X.ts" />
+    <TypeScriptCompile Include="Xmpp\PresenceType.ts" />
+    <TypeScriptCompile Include="Xmpp\Roster\Ask.ts" />
+    <TypeScriptCompile Include="Xmpp\Roster\Roster.ts" />
+    <TypeScriptCompile Include="Xmpp\Roster\RosterEventArgs.ts" />
+    <TypeScriptCompile Include="Xmpp\Roster\RosterItem.ts" />
+    <TypeScriptCompile Include="Xmpp\Roster\Subscription.ts" />
+    <TypeScriptCompile Include="Xmpp\Session\Session.ts" />
+    <TypeScriptCompile Include="Xmpp\Show.ts" />
+    <TypeScriptCompile Include="_references.ts" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <TypeScriptCompile Include="Collections\Collections.ts" />
+    <TypeScriptCompile Include="EventArgs.ts" />
+    <TypeScriptCompile Include="ExceptionEventArgs.ts" />
+    <TypeScriptCompile Include="FilterData.ts" />
+    <TypeScriptCompile Include="Id.ts" />
+    <TypeScriptCompile Include="IqEventArgs.ts" />
+    <TypeScriptCompile Include="IqFilter.ts" />
+    <TypeScriptCompile Include="Jid.ts" />
+    <TypeScriptCompile Include="MessageEventArgs.ts" />
+    <TypeScriptCompile Include="Namespaces.ts" />
+    <TypeScriptCompile Include="PresenceEventArgs.ts" />
+    <TypeScriptCompile Include="SaslHandler.ts" />
+    <TypeScriptCompile Include="StanzaEventArgs.ts" />
+    <TypeScriptCompile Include="StreamFeatureHelper.ts" />
+    <TypeScriptCompile Include="typings\sax.d.ts" />
+    <TypeScriptCompile Include="Util\Enum.ts" />
+    <TypeScriptCompile Include="Xml\Factory.ts" />
+    <TypeScriptCompile Include="Xml\XmppStreamParser.ts" />
+    <TypeScriptCompile Include="Xml\XmppXElement.ts" />
+    <TypeScriptCompile Include="typings\linqjs.d.ts" />
+    <TypeScriptCompile Include="typings\ltxml.d.ts" />
+    <TypeScriptCompile Include="Xmpp\Base\Iq.ts" />
+    <TypeScriptCompile Include="Xmpp\Base\Message.ts" />
+    <TypeScriptCompile Include="Xmpp\Base\Presence.ts" />
+    <TypeScriptCompile Include="Xmpp\Base\Sasl.ts" />
+    <TypeScriptCompile Include="Xmpp\Base\Stream.ts" />
+    <TypeScriptCompile Include="Xmpp\Base\XmppXElementWithAddress.ts" />
+    <TypeScriptCompile Include="Xmpp\Base\XmppXElementWithAddressAndId.ts" />
+    <TypeScriptCompile Include="Xmpp\Base\XmppXElementWithIdAttribute.ts" />
+    <TypeScriptCompile Include="Xmpp\Client\Iq.ts" />
+    <TypeScriptCompile Include="Xmpp\Client\Message.ts" />
+    <TypeScriptCompile Include="Xmpp\IqType.ts" />
+    <TypeScriptCompile Include="Xmpp\MessageType.ts" />
+    <TypeScriptCompile Include="Xmpp\Sasl\Auth.ts" />
+    <TypeScriptCompile Include="Xmpp\Sasl\Challenge.ts" />
+    <TypeScriptCompile Include="Xmpp\Sasl\Failure.ts" />
+    <TypeScriptCompile Include="Xmpp\Sasl\Mechanism.ts" />
+    <TypeScriptCompile Include="Xmpp\Sasl\Mechanisms.ts" />
+    <TypeScriptCompile Include="Xmpp\Sasl\Response.ts" />
+    <TypeScriptCompile Include="Xmpp\Sasl\SaslEventArgs.ts" />
+    <TypeScriptCompile Include="Xmpp\Sasl\Success.ts" />
+    <TypeScriptCompile Include="Xmpp\Stream\Features\Register.ts" />
+    <TypeScriptCompile Include="Xmpp\Stream\StreamFeatures.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Crypt\RandomNumberGenerator.ts" />
+    <TypeScriptCompile Include="Net\WebSocketEx.ts" />
+    <TypeScriptCompile Include="Net\ISocket.ts" />
+    <TypeScriptCompile Include="Sasl\Digest\Step2.ts" />
+    <TypeScriptCompile Include="Sasl\Scram\ScramHelper.ts" />
+    <TypeScriptCompile Include="Sasl\DigestMD5Processor.ts" />
+    <TypeScriptCompile Include="Sasl\Digest\Step1.ts" />
+    <TypeScriptCompile Include="Sasl\PlainProcessor.ts" />
+    <TypeScriptCompile Include="Sasl\SaslFactory.ts" />
+    <TypeScriptCompile Include="Sasl\SaslMechanism.ts" />
+    <TypeScriptCompile Include="Sasl\SaslProcessor.ts" />
+    <TypeScriptCompile Include="Sasl\ScramProcessor.ts" />
+    <TypeScriptCompile Include="Util\Base64.ts" />
+    <TypeScriptCompile Include="Events.ts" />
+    <TypeScriptCompile Include="Crypt\MD5.ts" />
+    <TypeScriptCompile Include="typings\lib.d.ts" />
+    <TypeScriptCompile Include="XmppClient.ts" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Changelog.md" />
+    <Content Include="3rdPartyLicensesAndSoftware.txt" />
+    <Content Include="Copy.js" />
+    <Content Include="License.txt" />
+    <Content Include="YUICombine.msbuild">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="YUICompress.msbuild">
+      <SubType>Designer</SubType>
+    </None>
+    <TypeScriptCompile Include="Xmpp\Client\Stream.ts" />
+    <TypeScriptCompile Include="Xmpp\Client\Presence.ts" />
+    <TypeScriptCompile Include="Crypt\SHA1.ts" />
+    <Content Include="linq.js" />
+    <Content Include="ltxml.js" />
+    <Content Include="sax.js" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Readme.md" />
+    <Content Include="web.config" />
+    <TypeScriptCompile Include="typings\qunit.d.ts" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EcmaScript.NET">
+      <HintPath>..\packages\YUICompressor.NET.MSBuild.2.7.0.0\lib\NET20\EcmaScript.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\packages\YUICompressor.NET.2.0.0.0\lib\NET20\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="Yahoo.Yui.Compressor">
+      <HintPath>..\packages\YUICompressor.NET.MSBuild.2.7.0.0\lib\NET20\Yahoo.Yui.Compressor.dll</HintPath>
+    </Reference>
+    <Reference Include="Yahoo.Yui.Compressor.Build.MsBuild">
+      <HintPath>..\packages\YUICompressor.NET.MSBuild.2.7.0.0\lib\NET20\Yahoo.Yui.Compressor.Build.MsBuild.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptGeneratesDeclarations>True</TypeScriptGeneratesDeclarations>
+    <TypeScriptModuleKind>none</TypeScriptModuleKind>
+    <TypeScriptRemoveComments>False</TypeScriptRemoveComments>
+    <TypeScriptOutFile>matrix.js</TypeScriptOutFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptOutFile>matrix.js</TypeScriptOutFile>
+    <TypeScriptGeneratesDeclarations>True</TypeScriptGeneratesDeclarations>
+    <TypeScriptRemoveComments>False</TypeScriptRemoveComments>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64671</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:64671/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>"$(MSBuildBinPath)\msbuild.exe" "$(ProjectDir)YUICompress.msbuild" /p:ConfigurationName=$(ConfigurationName)
+"$(MSBuildBinPath)\msbuild.exe" "$(ProjectDir)YUICombine.msbuild" /p:ConfigurationName=$(ConfigurationName)
+
+echo Start Post build
+copy "$(SolutionDir)Library\matrix.js" "$(SolutionDir)Test\matrix.js"
+
+copy "$(SolutionDir)Library\matrix.combined.js" "$(SolutionDir)build\matrix.combined.js"
+copy "$(SolutionDir)Library\matrix.js.map" "$(SolutionDir)build\matrix.js.map"
+copy "$(SolutionDir)Library\matrix.d.ts" "$(SolutionDir)build\matrix.d.ts"
+
+copy "$(SolutionDir)Library\matrix.js.map" "$(SolutionDir)Test\matrix.js.map"
+copy "$(SolutionDir)Library\matrix.js.map" "$(SolutionDir)Examples\matrix.js.map"
+
+copy "$(SolutionDir)Library\matrix.min.js" "$(SolutionDir)Test\matrix.min.js"
+copy "$(SolutionDir)Library\matrix.min.js" "$(SolutionDir)Examples\matrix.min.js"
+
+copy "$(SolutionDir)Library\matrix.d.ts" "$(SolutionDir)Test\matrix.d.ts"
+copy "$(SolutionDir)Library\matrix.d.ts" "$(SolutionDir)Examples\matrix.d.ts"
+
+copy "$(SolutionDir)Library\matrix.combined.js" "$(SolutionDir)Test\matrix.combined.js"
+copy "$(SolutionDir)Library\matrix.combined.js" "$(SolutionDir)Examples\matrix.combined.js"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

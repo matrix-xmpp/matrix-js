@@ -1,0 +1,39 @@
+﻿html, body {
+    /*height: 100%;*/
+}
+
+#xmlLog {
+    font-family: Courier New, Courier, monospace;
+}
+
+.log {
+    margin-bottom: 5px;
+}
+
+#xmlLog .send {
+    color: red;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+#xmlLog .ts {
+    color: darkgreen;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+#xmlLog .recv {
+    color: blue;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.fill { 
+    min-height: 100%;
+    height: 100%;
+}
+
+ #xmlLog, #events, #roster, #msgs {
+    overflow-y:auto;
+    overflow-x:hidden;
+ }

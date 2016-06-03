@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/MsBuild/2003">
+  <UsingTask TaskName="JavaScriptCompressorTask" AssemblyFile="..\packages\YUICompressor.NET.MSBuild.2.7.0.0\lib\NET20\Yahoo.Yui.Compressor.Build.MsBuild.dll" />
+
+  <Target Name="Minimize" Condition="'$(ConfigurationName)' == 'Release'">
+    <ItemGroup>
+      <JavaScriptFiles Include="copy.js">
+        <CompressionType>None</CompressionType>
+      </JavaScriptFiles>
+      <JavaScriptFiles Include="sax.js">
+        <CompressionType>None</CompressionType>
+      </JavaScriptFiles>
+      <JavaScriptFiles Include="linq.js">
+        <CompressionType>None</CompressionType>
+      </JavaScriptFiles>
+      <JavaScriptFiles Include="ltxml.js">
+        <CompressionType>None</CompressionType>
+      </JavaScriptFiles>
+      <JavaScriptFiles Include="matrix.js">
+        <CompressionType>None</CompressionType>
+      </JavaScriptFiles>
+    </ItemGroup>
+
+    <JavaScriptCompressorTask
+        SourceFiles="@(JavaScriptFiles)"
+        DeleteSourceFiles="false"
+        OutputFile="matrix.combined.js"
+      />
+  </Target>
+</Project>

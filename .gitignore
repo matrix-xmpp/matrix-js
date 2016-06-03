@@ -1,0 +1,8 @@
+Library/bin/
+Library/obj/
+packages/
+Test/obj/
+Test/bin/
+Examples/obj/
+Examples/bin/
+MatriX-JS.sln.GhostDoc.xml

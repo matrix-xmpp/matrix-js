@@ -1,0 +1,8 @@
+﻿1) linq.js
+	* MIT license
+	* https://linqjs.codeplex.com/
+2) ltxml.js
+	* MIT license
+	* https://ltxmljs.codeplex.com/
+3)  sax.js
+	* ISC License

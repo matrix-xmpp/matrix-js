@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Matrix Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <script src="Scripts/jquery-1.9.1.js"></script>
+    <link href="Styles/style.css" rel="stylesheet" />
+
+    <!--<script src="sax.js"></script>
+    <script src="linq.js"></script>
+    <script src="ltxml.js"></script>
+    <script src="matrix.js"></script>-->
+
+    <!--<script src="matrix.min.js"></script>-->
+
+    <script src="matrix.combined.js"></script>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="container-fluid">
+            <div class="col-sm-6">
+
+                <div class="form-group">
+                    <label for="xmppDomain">XMPP Domain:</label>
+                    <input type="text" class="form-control" id="xmppDomain" placeholder="XMPP domain" value="localhost">
+                </div>
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" class="form-control" id="username" placeholder="username" value="alex">
+                </div>
+                <div class="form-group">
+                    <label for="pasword">Password:</label>
+                    <input type="password" class="form-control" id="password" placeholder="Enter password">
+                </div>
+
+            </div>
+            <div class="col-sm-6">
+
+                <div class="form-group">
+                    <label for="uri">Uri BOSH:</label>
+                    <!--<input type="text" class="form-control" id="uri" placeholder="http://localhost:5280/http-bind" value="http://localhost:5280/http-bind">-->
+                    <input type="text" class="form-control" id="uri" placeholder="http://192.168.1.10:5280/http-bind" value="http://192.168.1.10:5280/http-bind">
+                </div>
+
+                <div class="form-group">
+                    <label for="uriWS">Uri Websocket:</label>
+                    <!--<input type="text" class="form-control" id="uriWS" placeholder="ws://localhost:5280/xmpp-websocket" value="ws://localhost:5280/xmpp-websocket">-->
+                    <input type="text" class="form-control" id="uriWS" placeholder="ws://192.168.1.10:5280/xmpp-websocket" value="ws://192.168.1.10:5280/xmpp-websocket">
+                </div>
+
+                <div class="form-group">
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="optionsTransport" id="optionsTransport1" value="bosh" checked>
+                            BOSH
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="optionsTransport" id="optionsTransport2" value="websocket">
+                            Websockets
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <button id="connect" type="button" class="btn btn-primary btn-block">Connect</button>
+
+                        </div>
+                        <div class="col-xs-6">
+
+                            <button id="disconnect" type="button" class="btn btn-primary btn-block">Disconnect</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-fluid">
+            <ul class="nav nav-tabs" role="tablist" id="myTab">
+                <li role="presentation" class="active"><a href="#xmlLog" aria-controls="xmlLog" role="tab" data-toggle="tab">Xml Log</a></li>
+                <li role="presentation"><a href="#events" aria-controls="events" role="tab" data-toggle="tab">Events</a></li>
+                <li role="presentation"><a href="#roster" aria-controls="roster" role="tab" data-toggle="tab">Roster</a></li>
+                <li role="presentation"><a href="#msgs" aria-controls="msgs" role="tab" data-toggle="tab">Messages</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="xmlLog"></div>
+                <div role="tabpanel" class="tab-pane" id="events"></div>
+                <div role="tabpanel" class="tab-pane" id="roster"></div>
+                <div role="tabpanel" class="tab-pane" id="msgs"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="XmppClientDemo.js"></script>
+</body>
+</html>

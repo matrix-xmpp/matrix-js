@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatriX-JS", "Library\MatriX-JS.csproj", "{A08AF33E-D0A3-4C43-A71E-777DADDAC555}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{17C0F1F6-B390-4F60-AE8A-FCBCA558F1D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examples", "Examples\Examples.csproj", "{1D37EC64-003D-4EE3-A327-A84B0958BC53}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A08AF33E-D0A3-4C43-A71E-777DADDAC555}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A08AF33E-D0A3-4C43-A71E-777DADDAC555}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A08AF33E-D0A3-4C43-A71E-777DADDAC555}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A08AF33E-D0A3-4C43-A71E-777DADDAC555}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17C0F1F6-B390-4F60-AE8A-FCBCA558F1D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17C0F1F6-B390-4F60-AE8A-FCBCA558F1D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17C0F1F6-B390-4F60-AE8A-FCBCA558F1D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17C0F1F6-B390-4F60-AE8A-FCBCA558F1D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D37EC64-003D-4EE3-A327-A84B0958BC53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D37EC64-003D-4EE3-A327-A84B0958BC53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D37EC64-003D-4EE3-A327-A84B0958BC53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D37EC64-003D-4EE3-A327-A84B0958BC53}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
