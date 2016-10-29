@@ -2,7 +2,8 @@
 <Project xmlns="http://schemas.microsoft.com/developer/MsBuild/2003">
   <UsingTask TaskName="JavaScriptCompressorTask" AssemblyFile="..\packages\YUICompressor.NET.MSBuild.2.7.0.0\lib\NET20\Yahoo.Yui.Compressor.Build.MsBuild.dll" />
 
-  <Target Name="Minimize" Condition="'$(ConfigurationName)' == 'Release'">
+  <!--<Target Name="Minimize" Condition="'$(ConfigurationName)' == 'Release'">-->
+<Target Name="Minimize">
     <ItemGroup>
       <JavaScriptFiles Include="copy.js">
         <CompressionType>None</CompressionType>
