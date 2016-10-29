@@ -8822,7 +8822,7 @@ var Matrix;
                 this.list.forEach(callback);
             };
             return Queue;
-        })();
+        }());
         Collections.Queue = Queue; // End of queue
     })(Collections = Matrix.Collections || (Matrix.Collections = {}));
 })(Matrix || (Matrix = {}));
@@ -8883,7 +8883,7 @@ var Matrix;
         })(Functions = Util.Functions || (Util.Functions = {}));
     })(Util = Matrix.Util || (Matrix.Util = {}));
 })(Matrix || (Matrix = {}));
-/// <reference path="../util/functions.ts" />
+/// <reference path="../Util/Functions.ts" />
 // Copyright 2013 Basarat Ali Syed. All Rights Reserved.
 //
 // Licensed under MIT open source license http://opensource.org/licenses/MIT
@@ -9379,7 +9379,7 @@ var Matrix;
                 };
             };
             return LinkedList;
-        })();
+        }());
         Collections.LinkedList = LinkedList; // End of linked list 
         var Dictionary = (function () {
             /**
@@ -9552,7 +9552,7 @@ var Matrix;
                 return toret + "\n}";
             };
             return Dictionary;
-        })();
+        }());
         Collections.Dictionary = Dictionary; // End of dictionary
     })(Collections = Matrix.Collections || (Matrix.Collections = {}));
 })(Matrix || (Matrix = {})); // End of module  
@@ -9663,7 +9663,7 @@ var Matrix;
                 this.list.forEach(callback);
             };
             return Stack;
-        })();
+        }());
         Collections.Stack = Stack; // End of stack 
     })(Collections = Matrix.Collections || (Matrix.Collections = {}));
 })(Matrix || (Matrix = {}));
@@ -9685,7 +9685,7 @@ var Matrix;
             configurable: true
         });
         return EventArgs;
-    })();
+    }());
     Matrix.EventArgs = EventArgs;
 })(Matrix || (Matrix = {}));
 /*
@@ -9788,7 +9788,7 @@ var Matrix;
             return new Jid(this.full);
         };
         return Jid;
-    })();
+    }());
     Matrix.Jid = Jid;
 })(Matrix || (Matrix = {}));
 var __extends = (this && this.__extends) || function (d, b) {
@@ -9819,7 +9819,7 @@ var Matrix;
             configurable: true
         });
         return JidEventArgs;
-    })(Matrix.EventArgs);
+    }(Matrix.EventArgs));
     Matrix.JidEventArgs = JidEventArgs;
 })(Matrix || (Matrix = {}));
 /*
@@ -9852,7 +9852,7 @@ var Matrix;
                 configurable: true
             });
             return WebRequestEventArgs;
-        })(Matrix.EventArgs);
+        }(Matrix.EventArgs));
         Net.WebRequestEventArgs = WebRequestEventArgs;
     })(Net = Matrix.Net || (Matrix.Net = {}));
 })(Matrix || (Matrix = {}));
@@ -9896,7 +9896,7 @@ var Matrix;
                 return Math.floor(Math.random() * (max - min)) + min;
             };
             return RandomNumberGenerator;
-        })();
+        }());
         Crypt.RandomNumberGenerator = RandomNumberGenerator;
     })(Crypt = Matrix.Crypt || (Matrix.Crypt = {}));
 })(Matrix || (Matrix = {}));
@@ -10170,7 +10170,7 @@ var Matrix;
                 return el;
             };
             return XmppXElement;
-        })(XElement);
+        }(XElement));
         Xml.XmppXElement = XmppXElement;
     })(Xml = Matrix.Xml || (Matrix.Xml = {}));
 })(Matrix || (Matrix = {}));
@@ -10197,7 +10197,7 @@ var Matrix;
             configurable: true
         });
         return ExceptionEventArgs;
-    })(Matrix.EventArgs);
+    }(Matrix.EventArgs));
     Matrix.ExceptionEventArgs = ExceptionEventArgs;
 })(Matrix || (Matrix = {}));
 /*
@@ -10221,7 +10221,7 @@ var Matrix;
             configurable: true
         });
         return TextEventArgs;
-    })(Matrix.EventArgs);
+    }(Matrix.EventArgs));
     Matrix.TextEventArgs = TextEventArgs;
 })(Matrix || (Matrix = {}));
 /*
@@ -10370,6 +10370,7 @@ var Matrix;
  * Email: alex@ag-software.net *
  */
 /// <reference path="../../Xml/XmppXElement.ts" />
+/// <reference path="../../Jid.ts" />
 var Matrix;
 (function (Matrix) {
     var Xmpp;
@@ -10420,7 +10421,7 @@ var Matrix;
                     this.to = to;
                 };
                 return XmppXElementWithAddress;
-            })(XmppXElement);
+            }(XmppXElement));
             Base.XmppXElementWithAddress = XmppXElementWithAddress;
         })(Base = Xmpp.Base || (Xmpp.Base = {}));
     })(Xmpp = Matrix.Xmpp || (Matrix.Xmpp = {}));
@@ -10640,7 +10641,7 @@ var Matrix;
                     return this;
                 };
                 return Body;
-            })(XmppXElementWithAddress);
+            }(XmppXElementWithAddress));
             Bosh.Body = Body;
         })(Bosh = Xmpp.Bosh || (Xmpp.Bosh = {}));
     })(Xmpp = Matrix.Xmpp || (Matrix.Xmpp = {}));
@@ -10670,7 +10671,7 @@ var Matrix;
             }
         };
         return GenericEvent;
-    })();
+    }());
     Matrix.GenericEvent = GenericEvent;
 })(Matrix || (Matrix = {}));
 /// <reference path="../events.ts" />
@@ -10702,7 +10703,7 @@ var Matrix;
                 clearTimeout(this._timerToken);
             };
             return Timer;
-        })();
+        }());
         Util.Timer = Timer;
     })(Util = Matrix.Util || (Matrix.Util = {}));
 })(Matrix || (Matrix = {}));
@@ -10957,7 +10958,7 @@ var Matrix;
                 }, this.sendFuncInterval);
             };
             return BoshSocket;
-        })();
+        }());
         Net.BoshSocket = BoshSocket;
     })(Net = Matrix.Net || (Matrix.Net = {}));
 })(Matrix || (Matrix = {}));
@@ -11073,7 +11074,7 @@ var Matrix;
                 this.webRequest.onreadystatechange = function () { };
             };
             return WebRequest;
-        })();
+        }());
         Net.WebRequest = WebRequest;
     })(Net = Matrix.Net || (Matrix.Net = {}));
 })(Matrix || (Matrix = {}));
@@ -11146,7 +11147,7 @@ var Matrix;
                     _super.call(this, Matrix.Namespaces.sasl, tag);
                 }
                 return Sasl;
-            })(XmppXElement);
+            }(XmppXElement));
             Base.Sasl = Sasl;
         })(Base = Xmpp.Base || (Xmpp.Base = {}));
     })(Xmpp = Matrix.Xmpp || (Matrix.Xmpp = {}));
@@ -11186,7 +11187,7 @@ var Matrix;
                     configurable: true
                 });
                 return Auth;
-            })(Xmpp.Base.Sasl);
+            }(Xmpp.Base.Sasl));
             Sasl.Auth = Auth;
         })(Sasl = Xmpp.Sasl || (Xmpp.Sasl = {}));
     })(Xmpp = Matrix.Xmpp || (Matrix.Xmpp = {}));
@@ -11233,7 +11234,7 @@ var Matrix;
             SaslProcessor.prototype.parse = function (ch) {
             };
             return SaslProcessor;
-        })();
+        }());
         Sasl.SaslProcessor = SaslProcessor;
     })(Sasl = Matrix.Sasl || (Matrix.Sasl = {}));
 })(Matrix || (Matrix = {}));
@@ -11261,7 +11262,7 @@ var Matrix;
                 xmppClient.send(new Auth(Sasl.SaslMechanism.Anonymous));
             };
             return AnonymousProcessor;
-        })(Sasl.SaslProcessor);
+        }(Sasl.SaslProcessor));
         Sasl.AnonymousProcessor = AnonymousProcessor;
     })(Sasl = Matrix.Sasl || (Matrix.Sasl = {}));
 })(Matrix || (Matrix = {}));
@@ -11305,7 +11306,7 @@ var Matrix;
                     configurable: true
                 });
                 return XmppXElementWithJidAttribute;
-            })(XmppXElement);
+            }(XmppXElement));
             Base.XmppXElementWithJidAttribute = XmppXElementWithJidAttribute;
         })(Base = Xmpp.Base || (Xmpp.Base = {}));
     })(Xmpp = Matrix.Xmpp || (Matrix.Xmpp = {}));
@@ -11335,7 +11336,7 @@ var Matrix;
                     configurable: true
                 });
                 return Item;
-            })(Base.XmppXElementWithJidAttribute);
+            }(Base.XmppXElementWithJidAttribute));
             Base.Item = Item;
         })(Base = Xmpp.Base || (Xmpp.Base = {}));
     })(Xmpp = Matrix.Xmpp || (Matrix.Xmpp = {}));
@@ -11429,7 +11430,7 @@ var Matrix;
                     _super.call(this, ns);
                 }
                 return RosterItem;
-            })(Base.Item);
+            }(Base.Item));
             Base.RosterItem = RosterItem;
         })(Base = Xmpp.Base || (Xmpp.Base = {}));
     })(Xmpp = Matrix.Xmpp || (Matrix.Xmpp = {}));
@@ -11452,7 +11453,7 @@ var Matrix;
         Id._prefix = "MX_";
         Id._counter = 0;
         return Id;
-    })();
+    }());
     Matrix.Id = Id;
 })(Matrix || (Matrix = {}));
 /*
@@ -11490,7 +11491,7 @@ var Matrix;
                     this.id = sId;
                 };
                 return XmppXElementWithAddressAndId;
-            })(Base.XmppXElementWithAddress);
+            }(Base.XmppXElementWithAddress));
             Base.XmppXElementWithAddressAndId = XmppXElementWithAddressAndId;
         })(Base = Xmpp.Base || (Xmpp.Base = {}));
     })(Xmpp = Matrix.Xmpp || (Matrix.Xmpp = {}));
@@ -11520,7 +11521,7 @@ var Matrix;
                     configurable: true
                 });
                 return XmppXElementWithAddressAndIdAndVersion;
-            })(Base.XmppXElementWithAddressAndId);
+            }(Base.XmppXElementWithAddressAndId));
             Base.XmppXElementWithAddressAndIdAndVersion = XmppXElementWithAddressAndIdAndVersion;
         })(Base = Xmpp.Base || (Xmpp.Base = {}));
     })(Xmpp = Matrix.Xmpp || (Matrix.Xmpp = {}));
@@ -11566,7 +11567,7 @@ var Matrix;
                     configurable: true
                 });
                 return Bind;
-            })(XmppXElement);
+            }(XmppXElement));
             Bind_1.Bind = Bind;
         })(Bind = Xmpp.Bind || (Xmpp.Bind = {}));
     })(Xmpp = Matrix.Xmpp || (Matrix.Xmpp = {}));
@@ -11621,7 +11622,7 @@ var Matrix;
                     configurable: true
                 });
                 return Iq;
-            })(Base.XmppXElementWithAddressAndId);
+            }(Base.XmppXElementWithAddressAndId));
             Base.Iq = Iq;
         })(Base = Xmpp.Base || (Xmpp.Base = {}));
     })(Xmpp = Matrix.Xmpp || (Matrix.Xmpp = {}));
@@ -11646,7 +11647,7 @@ var Matrix;
                     _super.call(this, Matrix.Namespaces.client);
                 }
                 return Iq;
-            })(Xmpp.Base.Iq);
+            }(Xmpp.Base.Iq));
             Client.Iq = Iq;
         })(Client = Xmpp.Client || (Xmpp.Client = {}));
     })(Xmpp = Matrix.Xmpp || (Matrix.Xmpp = {}));
@@ -11680,7 +11681,7 @@ var Matrix;
                     configurable: true
                 });
                 return IqQuery;
-            })(Client.Iq);
+            }(Client.Iq));
             Client.IqQuery = IqQuery;
         })(Client = Xmpp.Client || (Xmpp.Client = {}));
     })(Xmpp = Matrix.Xmpp || (Matrix.Xmpp = {}));
@@ -11729,7 +11730,7 @@ var Matrix;
                     configurable: true
                 });
                 return Delay;
-            })(XmppXElementWithAddress);
+            }(XmppXElementWithAddress));
             Delay_1.Delay = Delay;
         })(Delay = Xmpp.Delay || (Xmpp.Delay = {}));
     })(Xmpp = Matrix.Xmpp || (Matrix.Xmpp = {}));
@@ -11754,7 +11755,7 @@ var Matrix;
                     _super.call(this, Matrix.Namespaces.framing, "close");
                 }
                 return Close;
-            })(XmppXElement);
+            }(XmppXElement));
             Framing.Close = Close;
         })(Framing = Xmpp.Framing || (Xmpp.Framing = {}));
     })(Xmpp = Matrix.Xmpp || (Matrix.Xmpp = {}));
@@ -11779,7 +11780,7 @@ var Matrix;
                     _super.call(this, Matrix.Namespaces.framing, "open");
                 }
                 return Open;
-            })(XmppXElementWithAddressAndIdAndVersion);
+            }(XmppXElementWithAddressAndIdAndVersion));
             Framing.Open = Open;
         })(Framing = Xmpp.Framing || (Xmpp.Framing = {}));
     })(Xmpp = Matrix.Xmpp || (Matrix.Xmpp = {}));
@@ -11856,7 +11857,7 @@ var Matrix;
                     configurable: true
                 });
                 return Conference;
-            })(XmppXElementWithJidAttribute);
+            }(XmppXElementWithJidAttribute));
             Muc.Conference = Conference;
         })(Muc = Xmpp.Muc || (Xmpp.Muc = {}));
     })(Xmpp = Matrix.Xmpp || (Matrix.Xmpp = {}));
@@ -11935,7 +11936,7 @@ var Matrix;
                     configurable: true
                 });
                 return History;
-            })(XmppXElement);
+            }(XmppXElement));
             Muc.History = History;
         })(Muc = Xmpp.Muc || (Xmpp.Muc = {}));
     })(Xmpp = Matrix.Xmpp || (Matrix.Xmpp = {}));
@@ -12003,7 +12004,7 @@ var Matrix;
                     configurable: true
                 });
                 return Item;
-            })(Xmpp.Base.Item);
+            }(Xmpp.Base.Item));
             Muc.Item = Item;
         })(Muc = Xmpp.Muc || (Xmpp.Muc = {}));
     })(Xmpp = Matrix.Xmpp || (Matrix.Xmpp = {}));
@@ -12081,7 +12082,7 @@ var Matrix;
                         configurable: true
                     });
                     return Actor;
-                })(XmppXElementWithJidAttribute);
+                }(XmppXElementWithJidAttribute));
                 User.Actor = Actor;
             })(User = Muc.User || (Muc.User = {}));
         })(Muc = Xmpp.Muc || (Xmpp.Muc = {}));
@@ -12119,7 +12120,7 @@ var Matrix;
                         configurable: true
                     });
                     return Continue;
-                })(XmppXElement);
+                }(XmppXElement));
                 User.Continue = Continue;
             })(User = Muc.User || (Muc.User = {}));
         })(Muc = Xmpp.Muc || (Xmpp.Muc = {}));
@@ -12172,7 +12173,7 @@ var Matrix;
                         configurable: true
                     });
                     return Status;
-                })(XmppXElement);
+                }(XmppXElement));
                 User.Status = Status;
             })(User = Muc.User || (Muc.User = {}));
         })(Muc = Xmpp.Muc || (Xmpp.Muc = {}));
@@ -12322,7 +12323,7 @@ var Matrix;
                     configurable: true
                 });
                 return X;
-            })(XmppXElement);
+            }(XmppXElement));
             Muc.X = X;
         })(Muc = Xmpp.Muc || (Xmpp.Muc = {}));
     })(Xmpp = Matrix.Xmpp || (Matrix.Xmpp = {}));
@@ -12442,7 +12443,7 @@ var Matrix;
                     configurable: true
                 });
                 return RosterItem;
-            })(Matrix.Xmpp.Base.RosterItem);
+            }(Matrix.Xmpp.Base.RosterItem));
             Roster.RosterItem = RosterItem;
         })(Roster = Xmpp.Roster || (Xmpp.Roster = {}));
     })(Xmpp = Matrix.Xmpp || (Matrix.Xmpp = {}));
@@ -12480,7 +12481,7 @@ var Matrix;
                     configurable: true
                 });
                 return Roster;
-            })(XmppXElement);
+            }(XmppXElement));
             Roster_1.Roster = Roster;
         })(Roster = Xmpp.Roster || (Xmpp.Roster = {}));
     })(Xmpp = Matrix.Xmpp || (Matrix.Xmpp = {}));
@@ -12518,7 +12519,7 @@ var Matrix;
                     configurable: true
                 });
                 return RosterEventArgs;
-            })(Matrix.EventArgs);
+            }(Matrix.EventArgs));
             Roster.RosterEventArgs = RosterEventArgs;
         })(Roster = Xmpp.Roster || (Xmpp.Roster = {}));
     })(Xmpp = Matrix.Xmpp || (Matrix.Xmpp = {}));
@@ -12543,7 +12544,7 @@ var Matrix;
                     _super.call(this, Matrix.Namespaces.session, "session");
                 }
                 return Session;
-            })(XmppXElement);
+            }(XmppXElement));
             Session_1.Session = Session;
         })(Session = Xmpp.Session || (Xmpp.Session = {}));
     })(Xmpp = Matrix.Xmpp || (Matrix.Xmpp = {}));
@@ -12633,7 +12634,7 @@ var Matrix;
             configurable: true
         });
         return IqEventArgs;
-    })(Matrix.EventArgs);
+    }(Matrix.EventArgs));
     Matrix.IqEventArgs = IqEventArgs;
 })(Matrix || (Matrix = {}));
 /*
@@ -12671,7 +12672,7 @@ var Matrix;
             configurable: true
         });
         return FilterData;
-    })();
+    }());
     Matrix.FilterData = FilterData;
 })(Matrix || (Matrix = {}));
 /*
@@ -12731,7 +12732,7 @@ var Matrix;
                     configurable: true
                 });
                 return SaslEventArgs;
-            })(Matrix.EventArgs);
+            }(Matrix.EventArgs));
             Sasl.SaslEventArgs = SaslEventArgs;
         })(Sasl = Xmpp.Sasl || (Xmpp.Sasl = {}));
     })(Xmpp = Matrix.Xmpp || (Matrix.Xmpp = {}));
@@ -12810,7 +12811,7 @@ var Matrix;
                     configurable: true
                 });
                 return Presence;
-            })(Base.XmppXElementWithAddressAndId);
+            }(Base.XmppXElementWithAddressAndId));
             Base.Presence = Presence;
         })(Base = Xmpp.Base || (Xmpp.Base = {}));
     })(Xmpp = Matrix.Xmpp || (Matrix.Xmpp = {}));
@@ -12834,7 +12835,7 @@ var Matrix;
                     _super.call(this, Matrix.Namespaces.client);
                 }
                 return Presence;
-            })(Xmpp.Base.Presence);
+            }(Xmpp.Base.Presence));
             Client.Presence = Presence;
         })(Client = Xmpp.Client || (Xmpp.Client = {}));
     })(Xmpp = Matrix.Xmpp || (Matrix.Xmpp = {}));
@@ -12970,7 +12971,7 @@ var Matrix;
                 this.onWriteData.trigger(new Matrix.TextEventArgs(toSend));
             };
             return WebSocketEx;
-        })();
+        }());
         Net.WebSocketEx = WebSocketEx;
     })(Net = Matrix.Net || (Matrix.Net = {}));
 })(Matrix || (Matrix = {}));
@@ -13397,7 +13398,7 @@ var Matrix;
             this.send(pres);
         };
         return XmppClient;
-    })();
+    }());
     Matrix.XmppClient = XmppClient;
 })(Matrix || (Matrix = {}));
 /*
@@ -13447,7 +13448,7 @@ var Matrix;
             this._xmppClient.send(iq);
         };
         return IqFilter;
-    })();
+    }());
     Matrix.IqFilter = IqFilter;
 })(Matrix || (Matrix = {}));
 /*
@@ -13533,7 +13534,7 @@ var Matrix;
                     configurable: true
                 });
                 return Message;
-            })(Base.XmppXElementWithAddressAndId);
+            }(Base.XmppXElementWithAddressAndId));
             Base.Message = Message;
         })(Base = Xmpp.Base || (Xmpp.Base = {}));
     })(Xmpp = Matrix.Xmpp || (Matrix.Xmpp = {}));
@@ -13557,7 +13558,7 @@ var Matrix;
                     _super.call(this, Matrix.Namespaces.client);
                 }
                 return Message;
-            })(Xmpp.Base.Message);
+            }(Xmpp.Base.Message));
             Client.Message = Message;
         })(Client = Xmpp.Client || (Xmpp.Client = {}));
     })(Xmpp = Matrix.Xmpp || (Matrix.Xmpp = {}));
@@ -13585,7 +13586,7 @@ var Matrix;
             configurable: true
         });
         return MessageEventArgs;
-    })(Matrix.EventArgs);
+    }(Matrix.EventArgs));
     Matrix.MessageEventArgs = MessageEventArgs;
 })(Matrix || (Matrix = {}));
 /*
@@ -13611,7 +13612,7 @@ var Matrix;
             configurable: true
         });
         return PresenceEventArgs;
-    })(Matrix.EventArgs);
+    }(Matrix.EventArgs));
     Matrix.PresenceEventArgs = PresenceEventArgs;
 })(Matrix || (Matrix = {}));
 /*
@@ -13645,7 +13646,7 @@ var Matrix;
                     configurable: true
                 });
                 return Mechanism;
-            })(XmppXElement);
+            }(XmppXElement));
             Sasl.Mechanism = Mechanism;
         })(Sasl = Xmpp.Sasl || (Xmpp.Sasl = {}));
     })(Xmpp = Matrix.Xmpp || (Matrix.Xmpp = {}));
@@ -13684,7 +13685,7 @@ var Matrix;
                 return Matrix.Util.Base64.encode(str);
             };
             return PlainProcessor;
-        })(Sasl.SaslProcessor);
+        }(Sasl.SaslProcessor));
         Sasl.PlainProcessor = PlainProcessor;
     })(Sasl = Matrix.Sasl || (Matrix.Sasl = {}));
 })(Matrix || (Matrix = {}));
@@ -13693,7 +13694,263 @@ var Matrix;
  * Web: http://www.ag-software.de
  * Email: alex@ag-software.net *
  */
-/// <reference path="../../crypt/randomnumbergenerator.ts" />
+// based on:
+/*
+ * A JavaScript implementation of the RSA Data Security, Inc. MD5 Message
+ * Digest Algorithm, as defined in RFC 1321.
+ * Version 2.1 Copyright (C) Paul Johnston 1999 - 2002.
+ * Other contributors: Greg Holt, Andrew Kepert, Ydnar, Lostinet
+ * Distributed under the BSD License
+ * See http://pajhome.org.uk/crypt/md5 for more info.
+ */
+var Matrix;
+(function (Matrix) {
+    var Crypt;
+    (function (Crypt) {
+        var MD5;
+        (function (MD5) {
+            "use strict";
+            /*
+            * Configurable variables. You may need to tweak these to be compatible with
+            * the server-side, but the defaults work in most cases.
+            */
+            var hexcase = 0; /* hex output format. 0 - lowercase; 1 - uppercase */
+            var b64pad = ""; /* base-64 pad character. "=" for strict RFC compliance */
+            var chrsz = 8; /* bits per input character. 8 - ASCII; 16 - Unicode */
+            /*
+                 * Add integers, wrapping at 2^32. This uses 16-bit operations internally
+                 * to work around bugs in some JS interpreters.
+                 */
+            function safe_add(x, y) {
+                var lsw = (x & 0xFFFF) + (y & 0xFFFF);
+                var msw = (x >> 16) + (y >> 16) + (lsw >> 16);
+                return (msw << 16) | (lsw & 0xFFFF);
+            }
+            /*
+            * Bitwise rotate a 32-bit number to the left.
+            */
+            function bit_rol(num, cnt) {
+                return (num << cnt) | (num >>> (32 - cnt));
+            }
+            /*
+            * Convert a string to an array of little-endian words
+            * If chrsz is ASCII, characters >255 have their hi-byte silently ignored.
+            */
+            function str2binl(str) {
+                var bin = [];
+                var mask = (1 << chrsz) - 1;
+                for (var i = 0; i < str.length * chrsz; i += chrsz) {
+                    bin[i >> 5] |= (str.charCodeAt(i / chrsz) & mask) << (i % 32);
+                }
+                return bin;
+            }
+            /*
+             * Convert an array of little-endian words to a string
+             */
+            function binl2str(bin) {
+                var str = "";
+                var mask = (1 << chrsz) - 1;
+                for (var i = 0; i < bin.length * 32; i += chrsz) {
+                    str += String.fromCharCode((bin[i >> 5] >>> (i % 32)) & mask);
+                }
+                return str;
+            }
+            /*
+            * Convert an array of little-endian words to a hex string.
+            */
+            function binl2hex(binarray) {
+                var hex_tab = hexcase ? "0123456789ABCDEF" : "0123456789abcdef";
+                var str = "";
+                for (var i = 0; i < binarray.length * 4; i++) {
+                    str += hex_tab.charAt((binarray[i >> 2] >> ((i % 4) * 8 + 4)) & 0xF) +
+                        hex_tab.charAt((binarray[i >> 2] >> ((i % 4) * 8)) & 0xF);
+                }
+                return str;
+            }
+            /*
+             * Convert an array of little-endian words to a base-64 string
+             */
+            function binl2b64(binarray) {
+                var tab = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+                var str = "";
+                var triplet, j;
+                for (var i = 0; i < binarray.length * 4; i += 3) {
+                    triplet = (((binarray[i >> 2] >> 8 * (i % 4)) & 0xFF) << 16) |
+                        (((binarray[i + 1 >> 2] >> 8 * ((i + 1) % 4)) & 0xFF) << 8) |
+                        ((binarray[i + 2 >> 2] >> 8 * ((i + 2) % 4)) & 0xFF);
+                    for (j = 0; j < 4; j++) {
+                        if (i * 8 + j * 6 > binarray.length * 32) {
+                            str += b64pad;
+                        }
+                        else {
+                            str += tab.charAt((triplet >> 6 * (3 - j)) & 0x3F);
+                        }
+                    }
+                }
+                return str;
+            }
+            /*
+            * These functions implement the four basic operations the algorithm uses.
+            */
+            function md5_cmn(q, a, b, x, s, t) {
+                return safe_add(bit_rol(safe_add(safe_add(a, q), safe_add(x, t)), s), b);
+            }
+            function md5_ff(a, b, c, d, x, s, t) {
+                return md5_cmn((b & c) | ((~b) & d), a, b, x, s, t);
+            }
+            function md5_gg(a, b, c, d, x, s, t) {
+                return md5_cmn((b & d) | (c & (~d)), a, b, x, s, t);
+            }
+            function md5_hh(a, b, c, d, x, s, t) {
+                return md5_cmn(b ^ c ^ d, a, b, x, s, t);
+            }
+            function md5_ii(a, b, c, d, x, s, t) {
+                return md5_cmn(c ^ (b | (~d)), a, b, x, s, t);
+            }
+            /*
+            * Calculate the MD5 of an array of little-endian words, and a bit length
+            */
+            function core_md5(x, len) {
+                /* append padding */
+                x[len >> 5] |= 0x80 << ((len) % 32);
+                x[(((len + 64) >>> 9) << 4) + 14] = len;
+                var a = 1732584193;
+                var b = -271733879;
+                var c = -1732584194;
+                var d = 271733878;
+                var olda, oldb, oldc, oldd;
+                for (var i = 0; i < x.length; i += 16) {
+                    olda = a;
+                    oldb = b;
+                    oldc = c;
+                    oldd = d;
+                    a = md5_ff(a, b, c, d, x[i + 0], 7, -680876936);
+                    d = md5_ff(d, a, b, c, x[i + 1], 12, -389564586);
+                    c = md5_ff(c, d, a, b, x[i + 2], 17, 606105819);
+                    b = md5_ff(b, c, d, a, x[i + 3], 22, -1044525330);
+                    a = md5_ff(a, b, c, d, x[i + 4], 7, -176418897);
+                    d = md5_ff(d, a, b, c, x[i + 5], 12, 1200080426);
+                    c = md5_ff(c, d, a, b, x[i + 6], 17, -1473231341);
+                    b = md5_ff(b, c, d, a, x[i + 7], 22, -45705983);
+                    a = md5_ff(a, b, c, d, x[i + 8], 7, 1770035416);
+                    d = md5_ff(d, a, b, c, x[i + 9], 12, -1958414417);
+                    c = md5_ff(c, d, a, b, x[i + 10], 17, -42063);
+                    b = md5_ff(b, c, d, a, x[i + 11], 22, -1990404162);
+                    a = md5_ff(a, b, c, d, x[i + 12], 7, 1804603682);
+                    d = md5_ff(d, a, b, c, x[i + 13], 12, -40341101);
+                    c = md5_ff(c, d, a, b, x[i + 14], 17, -1502002290);
+                    b = md5_ff(b, c, d, a, x[i + 15], 22, 1236535329);
+                    a = md5_gg(a, b, c, d, x[i + 1], 5, -165796510);
+                    d = md5_gg(d, a, b, c, x[i + 6], 9, -1069501632);
+                    c = md5_gg(c, d, a, b, x[i + 11], 14, 643717713);
+                    b = md5_gg(b, c, d, a, x[i + 0], 20, -373897302);
+                    a = md5_gg(a, b, c, d, x[i + 5], 5, -701558691);
+                    d = md5_gg(d, a, b, c, x[i + 10], 9, 38016083);
+                    c = md5_gg(c, d, a, b, x[i + 15], 14, -660478335);
+                    b = md5_gg(b, c, d, a, x[i + 4], 20, -405537848);
+                    a = md5_gg(a, b, c, d, x[i + 9], 5, 568446438);
+                    d = md5_gg(d, a, b, c, x[i + 14], 9, -1019803690);
+                    c = md5_gg(c, d, a, b, x[i + 3], 14, -187363961);
+                    b = md5_gg(b, c, d, a, x[i + 8], 20, 1163531501);
+                    a = md5_gg(a, b, c, d, x[i + 13], 5, -1444681467);
+                    d = md5_gg(d, a, b, c, x[i + 2], 9, -51403784);
+                    c = md5_gg(c, d, a, b, x[i + 7], 14, 1735328473);
+                    b = md5_gg(b, c, d, a, x[i + 12], 20, -1926607734);
+                    a = md5_hh(a, b, c, d, x[i + 5], 4, -378558);
+                    d = md5_hh(d, a, b, c, x[i + 8], 11, -2022574463);
+                    c = md5_hh(c, d, a, b, x[i + 11], 16, 1839030562);
+                    b = md5_hh(b, c, d, a, x[i + 14], 23, -35309556);
+                    a = md5_hh(a, b, c, d, x[i + 1], 4, -1530992060);
+                    d = md5_hh(d, a, b, c, x[i + 4], 11, 1272893353);
+                    c = md5_hh(c, d, a, b, x[i + 7], 16, -155497632);
+                    b = md5_hh(b, c, d, a, x[i + 10], 23, -1094730640);
+                    a = md5_hh(a, b, c, d, x[i + 13], 4, 681279174);
+                    d = md5_hh(d, a, b, c, x[i + 0], 11, -358537222);
+                    c = md5_hh(c, d, a, b, x[i + 3], 16, -722521979);
+                    b = md5_hh(b, c, d, a, x[i + 6], 23, 76029189);
+                    a = md5_hh(a, b, c, d, x[i + 9], 4, -640364487);
+                    d = md5_hh(d, a, b, c, x[i + 12], 11, -421815835);
+                    c = md5_hh(c, d, a, b, x[i + 15], 16, 530742520);
+                    b = md5_hh(b, c, d, a, x[i + 2], 23, -995338651);
+                    a = md5_ii(a, b, c, d, x[i + 0], 6, -198630844);
+                    d = md5_ii(d, a, b, c, x[i + 7], 10, 1126891415);
+                    c = md5_ii(c, d, a, b, x[i + 14], 15, -1416354905);
+                    b = md5_ii(b, c, d, a, x[i + 5], 21, -57434055);
+                    a = md5_ii(a, b, c, d, x[i + 12], 6, 1700485571);
+                    d = md5_ii(d, a, b, c, x[i + 3], 10, -1894986606);
+                    c = md5_ii(c, d, a, b, x[i + 10], 15, -1051523);
+                    b = md5_ii(b, c, d, a, x[i + 1], 21, -2054922799);
+                    a = md5_ii(a, b, c, d, x[i + 8], 6, 1873313359);
+                    d = md5_ii(d, a, b, c, x[i + 15], 10, -30611744);
+                    c = md5_ii(c, d, a, b, x[i + 6], 15, -1560198380);
+                    b = md5_ii(b, c, d, a, x[i + 13], 21, 1309151649);
+                    a = md5_ii(a, b, c, d, x[i + 4], 6, -145523070);
+                    d = md5_ii(d, a, b, c, x[i + 11], 10, -1120210379);
+                    c = md5_ii(c, d, a, b, x[i + 2], 15, 718787259);
+                    b = md5_ii(b, c, d, a, x[i + 9], 21, -343485551);
+                    a = safe_add(a, olda);
+                    b = safe_add(b, oldb);
+                    c = safe_add(c, oldc);
+                    d = safe_add(d, oldd);
+                }
+                return [a, b, c, d];
+            }
+            /*
+            * Calculate the HMAC-MD5, of a key and some data
+            */
+            function core_hmac_md5(key, data) {
+                var bkey = str2binl(key);
+                if (bkey.length > 16) {
+                    bkey = core_md5(bkey, key.length * chrsz);
+                }
+                var ipad = new Array(16), opad = new Array(16);
+                for (var i = 0; i < 16; i++) {
+                    ipad[i] = bkey[i] ^ 0x36363636;
+                    opad[i] = bkey[i] ^ 0x5C5C5C5C;
+                }
+                var hash = core_md5(ipad.concat(str2binl(data)), 512 + data.length * chrsz);
+                return core_md5(opad.concat(hash), 512 + 128);
+            }
+            /*
+            * These are the functions you'll usually want to call.
+            * They take string arguments and return either hex or base-64 encoded
+            * strings.
+            */
+            function hexdigest(s) {
+                return binl2hex(core_md5(str2binl(s), s.length * chrsz));
+            }
+            MD5.hexdigest = hexdigest;
+            function b64digest(s) {
+                return binl2b64(core_md5(str2binl(s), s.length * chrsz));
+            }
+            MD5.b64digest = b64digest;
+            function hash(s) {
+                return binl2str(core_md5(str2binl(s), s.length * chrsz));
+            }
+            MD5.hash = hash;
+            function hmac_hexdigest(key, data) {
+                return binl2hex(core_hmac_md5(key, data));
+            }
+            MD5.hmac_hexdigest = hmac_hexdigest;
+            function hmac_b64digest(key, data) {
+                return binl2b64(core_hmac_md5(key, data));
+            }
+            MD5.hmac_b64digest = hmac_b64digest;
+            function hmac_hash(key, data) {
+                return binl2str(core_hmac_md5(key, data));
+            }
+            MD5.hmac_hash = hmac_hash;
+        })(MD5 = Crypt.MD5 || (Crypt.MD5 = {}));
+    })(Crypt = Matrix.Crypt || (Matrix.Crypt = {}));
+})(Matrix || (Matrix = {}));
+/*
+ * Copyright (C) Alexander Gnauck, AG-Software
+ * Web: http://www.ag-software.de
+ * Email: alex@ag-software.net *
+ */
+/// <reference path="../../Crypt/RandomNumberGenerator.ts" />
+/// <reference path="../../Util/Functions.ts" />
+/// <reference path="../../Crypt/MD5.ts" />
 var Matrix;
 (function (Matrix) {
     var Sasl;
@@ -13860,7 +14117,7 @@ var Matrix;
                     return quote + s + quote;
                 };
                 return Step2;
-            })();
+            }());
             Digest.Step2 = Step2;
         })(Digest = Sasl.Digest || (Sasl.Digest = {}));
     })(Sasl = Matrix.Sasl || (Matrix.Sasl = {}));
@@ -13988,7 +14245,7 @@ var Matrix;
                     }
                 };
                 return Step1;
-            })();
+            }());
             Digest.Step1 = Step1;
         })(Digest = Sasl.Digest || (Sasl.Digest = {}));
     })(Sasl = Matrix.Sasl || (Matrix.Sasl = {}));
@@ -14012,7 +14269,7 @@ var Matrix;
                     _super.call(this, "challenge");
                 }
                 return Challenge;
-            })(Xmpp.Base.Sasl);
+            }(Xmpp.Base.Sasl));
             Sasl.Challenge = Challenge;
         })(Sasl = Xmpp.Sasl || (Xmpp.Sasl = {}));
     })(Xmpp = Matrix.Xmpp || (Matrix.Xmpp = {}));
@@ -14039,7 +14296,7 @@ var Matrix;
                         this.value = value;
                 }
                 return Response;
-            })(Xmpp.Base.Sasl);
+            }(Xmpp.Base.Sasl));
             Sasl.Response = Response;
         })(Sasl = Xmpp.Sasl || (Xmpp.Sasl = {}));
     })(Xmpp = Matrix.Xmpp || (Matrix.Xmpp = {}));
@@ -14087,7 +14344,7 @@ var Matrix;
                 }
             };
             return DigestMD5Processor;
-        })(Sasl.SaslProcessor);
+        }(Sasl.SaslProcessor));
         Sasl.DigestMD5Processor = DigestMD5Processor;
     })(Sasl = Matrix.Sasl || (Matrix.Sasl = {}));
 })(Matrix || (Matrix = {}));
@@ -14409,7 +14666,7 @@ var Matrix;
                     return ret;
                 };
                 return ScramHelper;
-            })();
+            }());
             Scram.ScramHelper = ScramHelper;
         })(Scram = Sasl.Scram || (Sasl.Scram = {}));
     })(Sasl = Matrix.Sasl || (Matrix.Sasl = {}));
@@ -14450,7 +14707,7 @@ var Matrix;
                 this.xmppClient.send(new Response(Base64.encode(clientFinalMessage)));
             };
             return ScramProcessor;
-        })(Sasl.SaslProcessor);
+        }(Sasl.SaslProcessor));
         Sasl.ScramProcessor = ScramProcessor;
     })(Sasl = Matrix.Sasl || (Matrix.Sasl = {}));
 })(Matrix || (Matrix = {}));
@@ -14502,7 +14759,7 @@ var Matrix;
                     _super.call(this, "success");
                 }
                 return Success;
-            })(Xmpp.Base.Sasl);
+            }(Xmpp.Base.Sasl));
             Sasl.Success = Success;
         })(Sasl = Xmpp.Sasl || (Xmpp.Sasl = {}));
     })(Xmpp = Matrix.Xmpp || (Matrix.Xmpp = {}));
@@ -14527,7 +14784,7 @@ var Matrix;
                     _super.call(this, Matrix.Namespaces.sasl, "failure");
                 }
                 return Failure;
-            })(XmppXElement);
+            }(XmppXElement));
             Sasl.Failure = Failure;
         })(Sasl = Xmpp.Sasl || (Xmpp.Sasl = {}));
     })(Xmpp = Matrix.Xmpp || (Matrix.Xmpp = {}));
@@ -14615,7 +14872,7 @@ var Matrix;
             this._saslProc = null;
         };
         return SaslHandler;
-    })();
+    }());
     Matrix.SaslHandler = SaslHandler;
 })(Matrix || (Matrix = {}));
 /*
@@ -14641,7 +14898,7 @@ var Matrix;
             configurable: true
         });
         return StanzaEventArgs;
-    })(Matrix.EventArgs);
+    }(Matrix.EventArgs));
     Matrix.StanzaEventArgs = StanzaEventArgs;
 })(Matrix || (Matrix = {}));
 /*
@@ -14684,7 +14941,7 @@ var Matrix;
             //this.compression = false;
         };
         return StreamFeatureHelper;
-    })();
+    }());
     Matrix.StreamFeatureHelper = StreamFeatureHelper;
 })(Matrix || (Matrix = {}));
 /*
@@ -14702,10 +14959,8 @@ var Matrix;
         (function (Factory) {
             "use strict";
             var Dictionary = Matrix.Collections.Dictionary;
-            //var _dict = new Dictionary<string, string>();
             var _dict = new Dictionary();
             var isFactoryInitialized = false;
-            //XmppXElement>(typee: { new (): T; }) 
             function buildKey(ns, localName) {
                 return "{" + ns + "}" + localName;
             }
@@ -14742,7 +14997,7 @@ var Matrix;
             Factory.registerElement = registerElement;
             function initFactory() {
                 // stream client
-                registerElement(Matrix.Namespaces.stream, "strea,", Matrix.Xmpp.Client.Stream);
+                registerElement(Matrix.Namespaces.stream, "stream", Matrix.Xmpp.Client.Stream);
                 // stream features
                 registerElement(Matrix.Namespaces.stream, "features", Matrix.Xmpp.Stream.StreamFeatures);
                 registerElement(Matrix.Namespaces.featureIqRegister, "register", Matrix.Xmpp.Stream.Features.Register);
@@ -14756,7 +15011,7 @@ var Matrix;
                 registerElement(Matrix.Namespaces.bind, "bind", Matrix.Xmpp.Bind.Bind);
                 registerElement(Matrix.Namespaces.session, "session", Matrix.Xmpp.Session.Session);
                 registerElement(Matrix.Namespaces.client, "iq", Matrix.Xmpp.Client.Iq);
-                registerElement(Matrix.Namespaces.client, "presene", Matrix.Xmpp.Client.Presence);
+                registerElement(Matrix.Namespaces.client, "presence", Matrix.Xmpp.Client.Presence);
                 registerElement(Matrix.Namespaces.client, "message", Matrix.Xmpp.Client.Message);
                 registerElement(Matrix.Namespaces.iqRoster, "item", Matrix.Xmpp.Roster.RosterItem);
                 registerElement(Matrix.Namespaces.iqRoster, "query", Matrix.Xmpp.Roster.Roster);
@@ -14768,7 +15023,6 @@ var Matrix;
                 // MUC
                 registerElement(Matrix.Namespaces.muc, "history", Matrix.Xmpp.Muc.History);
                 registerElement(Matrix.Namespaces.muc, "x", Matrix.Xmpp.Muc.X);
-                //registerElement(Namespaces.muc, "item", Matrix.Xmpp.Muc.Item);
                 registerElement(Matrix.Namespaces.xConference, "x", Matrix.Xmpp.Muc.Conference);
                 registerElement(Matrix.Namespaces.mucUser, "status", Matrix.Xmpp.Muc.User.Status);
                 registerElement(Matrix.Namespaces.mucUser, "continue", Matrix.Xmpp.Muc.User.Continue);
@@ -14935,7 +15189,7 @@ var Matrix;
                 this._parser.write(data);
             };
             return XmppStreamParser;
-        })();
+        }());
         Xml.XmppStreamParser = XmppStreamParser;
     })(Xml = Matrix.Xml || (Matrix.Xml = {}));
 })(Matrix || (Matrix = {}));
@@ -14959,7 +15213,7 @@ var Matrix;
                     _super.call(this, Matrix.Namespaces.stream, "stream", "stream");
                 }
                 return Stream;
-            })(Base.XmppXElementWithAddressAndIdAndVersion);
+            }(Base.XmppXElementWithAddressAndIdAndVersion));
             Base.Stream = Stream;
         })(Base = Xmpp.Base || (Xmpp.Base = {}));
     })(Xmpp = Matrix.Xmpp || (Matrix.Xmpp = {}));
@@ -14994,7 +15248,7 @@ var Matrix;
                     configurable: true
                 });
                 return XmppXElementWithIdAttribute;
-            })(XmppXElement);
+            }(XmppXElement));
             Base.XmppXElementWithIdAttribute = XmppXElementWithIdAttribute;
         })(Base = Xmpp.Base || (Xmpp.Base = {}));
     })(Xmpp = Matrix.Xmpp || (Matrix.Xmpp = {}));
@@ -15030,7 +15284,7 @@ var Matrix;
                         .firstOrDefault(function (n) { return n.saslMechanism === mech; });
                 };
                 return Mechanisms;
-            })(XmppXElement);
+            }(XmppXElement));
             Sasl.Mechanisms = Mechanisms;
         })(Sasl = Xmpp.Sasl || (Xmpp.Sasl = {}));
     })(Xmpp = Matrix.Xmpp || (Matrix.Xmpp = {}));
@@ -15057,7 +15311,7 @@ var Matrix;
                         _super.call(this, Matrix.Namespaces.featureIqRegister, "register");
                     }
                     return Register;
-                })(XmppXElement);
+                }(XmppXElement));
                 Features.Register = Register;
             })(Features = Stream.Features || (Stream.Features = {}));
         })(Stream = Xmpp.Stream || (Xmpp.Stream = {}));
@@ -15106,264 +15360,10 @@ var Matrix;
                     configurable: true
                 });
                 return StreamFeatures;
-            })(XmppXElement);
+            }(XmppXElement));
             Stream.StreamFeatures = StreamFeatures;
         })(Stream = Xmpp.Stream || (Xmpp.Stream = {}));
     })(Xmpp = Matrix.Xmpp || (Matrix.Xmpp = {}));
-})(Matrix || (Matrix = {}));
-/*
- * Copyright (C) Alexander Gnauck, AG-Software
- * Web: http://www.ag-software.de
- * Email: alex@ag-software.net *
- */
-// based on:
-/*
- * A JavaScript implementation of the RSA Data Security, Inc. MD5 Message
- * Digest Algorithm, as defined in RFC 1321.
- * Version 2.1 Copyright (C) Paul Johnston 1999 - 2002.
- * Other contributors: Greg Holt, Andrew Kepert, Ydnar, Lostinet
- * Distributed under the BSD License
- * See http://pajhome.org.uk/crypt/md5 for more info.
- */
-var Matrix;
-(function (Matrix) {
-    var Crypt;
-    (function (Crypt) {
-        var MD5;
-        (function (MD5) {
-            "use strict";
-            /*
-            * Configurable variables. You may need to tweak these to be compatible with
-            * the server-side, but the defaults work in most cases.
-            */
-            var hexcase = 0; /* hex output format. 0 - lowercase; 1 - uppercase */
-            var b64pad = ""; /* base-64 pad character. "=" for strict RFC compliance */
-            var chrsz = 8; /* bits per input character. 8 - ASCII; 16 - Unicode */
-            /*
-                 * Add integers, wrapping at 2^32. This uses 16-bit operations internally
-                 * to work around bugs in some JS interpreters.
-                 */
-            function safe_add(x, y) {
-                var lsw = (x & 0xFFFF) + (y & 0xFFFF);
-                var msw = (x >> 16) + (y >> 16) + (lsw >> 16);
-                return (msw << 16) | (lsw & 0xFFFF);
-            }
-            /*
-            * Bitwise rotate a 32-bit number to the left.
-            */
-            function bit_rol(num, cnt) {
-                return (num << cnt) | (num >>> (32 - cnt));
-            }
-            /*
-            * Convert a string to an array of little-endian words
-            * If chrsz is ASCII, characters >255 have their hi-byte silently ignored.
-            */
-            function str2binl(str) {
-                var bin = [];
-                var mask = (1 << chrsz) - 1;
-                for (var i = 0; i < str.length * chrsz; i += chrsz) {
-                    bin[i >> 5] |= (str.charCodeAt(i / chrsz) & mask) << (i % 32);
-                }
-                return bin;
-            }
-            /*
-             * Convert an array of little-endian words to a string
-             */
-            function binl2str(bin) {
-                var str = "";
-                var mask = (1 << chrsz) - 1;
-                for (var i = 0; i < bin.length * 32; i += chrsz) {
-                    str += String.fromCharCode((bin[i >> 5] >>> (i % 32)) & mask);
-                }
-                return str;
-            }
-            /*
-            * Convert an array of little-endian words to a hex string.
-            */
-            function binl2hex(binarray) {
-                var hex_tab = hexcase ? "0123456789ABCDEF" : "0123456789abcdef";
-                var str = "";
-                for (var i = 0; i < binarray.length * 4; i++) {
-                    str += hex_tab.charAt((binarray[i >> 2] >> ((i % 4) * 8 + 4)) & 0xF) +
-                        hex_tab.charAt((binarray[i >> 2] >> ((i % 4) * 8)) & 0xF);
-                }
-                return str;
-            }
-            /*
-             * Convert an array of little-endian words to a base-64 string
-             */
-            function binl2b64(binarray) {
-                var tab = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
-                var str = "";
-                var triplet, j;
-                for (var i = 0; i < binarray.length * 4; i += 3) {
-                    triplet = (((binarray[i >> 2] >> 8 * (i % 4)) & 0xFF) << 16) |
-                        (((binarray[i + 1 >> 2] >> 8 * ((i + 1) % 4)) & 0xFF) << 8) |
-                        ((binarray[i + 2 >> 2] >> 8 * ((i + 2) % 4)) & 0xFF);
-                    for (j = 0; j < 4; j++) {
-                        if (i * 8 + j * 6 > binarray.length * 32) {
-                            str += b64pad;
-                        }
-                        else {
-                            str += tab.charAt((triplet >> 6 * (3 - j)) & 0x3F);
-                        }
-                    }
-                }
-                return str;
-            }
-            /*
-            * These functions implement the four basic operations the algorithm uses.
-            */
-            function md5_cmn(q, a, b, x, s, t) {
-                return safe_add(bit_rol(safe_add(safe_add(a, q), safe_add(x, t)), s), b);
-            }
-            function md5_ff(a, b, c, d, x, s, t) {
-                return md5_cmn((b & c) | ((~b) & d), a, b, x, s, t);
-            }
-            function md5_gg(a, b, c, d, x, s, t) {
-                return md5_cmn((b & d) | (c & (~d)), a, b, x, s, t);
-            }
-            function md5_hh(a, b, c, d, x, s, t) {
-                return md5_cmn(b ^ c ^ d, a, b, x, s, t);
-            }
-            function md5_ii(a, b, c, d, x, s, t) {
-                return md5_cmn(c ^ (b | (~d)), a, b, x, s, t);
-            }
-            /*
-            * Calculate the MD5 of an array of little-endian words, and a bit length
-            */
-            function core_md5(x, len) {
-                /* append padding */
-                x[len >> 5] |= 0x80 << ((len) % 32);
-                x[(((len + 64) >>> 9) << 4) + 14] = len;
-                var a = 1732584193;
-                var b = -271733879;
-                var c = -1732584194;
-                var d = 271733878;
-                var olda, oldb, oldc, oldd;
-                for (var i = 0; i < x.length; i += 16) {
-                    olda = a;
-                    oldb = b;
-                    oldc = c;
-                    oldd = d;
-                    a = md5_ff(a, b, c, d, x[i + 0], 7, -680876936);
-                    d = md5_ff(d, a, b, c, x[i + 1], 12, -389564586);
-                    c = md5_ff(c, d, a, b, x[i + 2], 17, 606105819);
-                    b = md5_ff(b, c, d, a, x[i + 3], 22, -1044525330);
-                    a = md5_ff(a, b, c, d, x[i + 4], 7, -176418897);
-                    d = md5_ff(d, a, b, c, x[i + 5], 12, 1200080426);
-                    c = md5_ff(c, d, a, b, x[i + 6], 17, -1473231341);
-                    b = md5_ff(b, c, d, a, x[i + 7], 22, -45705983);
-                    a = md5_ff(a, b, c, d, x[i + 8], 7, 1770035416);
-                    d = md5_ff(d, a, b, c, x[i + 9], 12, -1958414417);
-                    c = md5_ff(c, d, a, b, x[i + 10], 17, -42063);
-                    b = md5_ff(b, c, d, a, x[i + 11], 22, -1990404162);
-                    a = md5_ff(a, b, c, d, x[i + 12], 7, 1804603682);
-                    d = md5_ff(d, a, b, c, x[i + 13], 12, -40341101);
-                    c = md5_ff(c, d, a, b, x[i + 14], 17, -1502002290);
-                    b = md5_ff(b, c, d, a, x[i + 15], 22, 1236535329);
-                    a = md5_gg(a, b, c, d, x[i + 1], 5, -165796510);
-                    d = md5_gg(d, a, b, c, x[i + 6], 9, -1069501632);
-                    c = md5_gg(c, d, a, b, x[i + 11], 14, 643717713);
-                    b = md5_gg(b, c, d, a, x[i + 0], 20, -373897302);
-                    a = md5_gg(a, b, c, d, x[i + 5], 5, -701558691);
-                    d = md5_gg(d, a, b, c, x[i + 10], 9, 38016083);
-                    c = md5_gg(c, d, a, b, x[i + 15], 14, -660478335);
-                    b = md5_gg(b, c, d, a, x[i + 4], 20, -405537848);
-                    a = md5_gg(a, b, c, d, x[i + 9], 5, 568446438);
-                    d = md5_gg(d, a, b, c, x[i + 14], 9, -1019803690);
-                    c = md5_gg(c, d, a, b, x[i + 3], 14, -187363961);
-                    b = md5_gg(b, c, d, a, x[i + 8], 20, 1163531501);
-                    a = md5_gg(a, b, c, d, x[i + 13], 5, -1444681467);
-                    d = md5_gg(d, a, b, c, x[i + 2], 9, -51403784);
-                    c = md5_gg(c, d, a, b, x[i + 7], 14, 1735328473);
-                    b = md5_gg(b, c, d, a, x[i + 12], 20, -1926607734);
-                    a = md5_hh(a, b, c, d, x[i + 5], 4, -378558);
-                    d = md5_hh(d, a, b, c, x[i + 8], 11, -2022574463);
-                    c = md5_hh(c, d, a, b, x[i + 11], 16, 1839030562);
-                    b = md5_hh(b, c, d, a, x[i + 14], 23, -35309556);
-                    a = md5_hh(a, b, c, d, x[i + 1], 4, -1530992060);
-                    d = md5_hh(d, a, b, c, x[i + 4], 11, 1272893353);
-                    c = md5_hh(c, d, a, b, x[i + 7], 16, -155497632);
-                    b = md5_hh(b, c, d, a, x[i + 10], 23, -1094730640);
-                    a = md5_hh(a, b, c, d, x[i + 13], 4, 681279174);
-                    d = md5_hh(d, a, b, c, x[i + 0], 11, -358537222);
-                    c = md5_hh(c, d, a, b, x[i + 3], 16, -722521979);
-                    b = md5_hh(b, c, d, a, x[i + 6], 23, 76029189);
-                    a = md5_hh(a, b, c, d, x[i + 9], 4, -640364487);
-                    d = md5_hh(d, a, b, c, x[i + 12], 11, -421815835);
-                    c = md5_hh(c, d, a, b, x[i + 15], 16, 530742520);
-                    b = md5_hh(b, c, d, a, x[i + 2], 23, -995338651);
-                    a = md5_ii(a, b, c, d, x[i + 0], 6, -198630844);
-                    d = md5_ii(d, a, b, c, x[i + 7], 10, 1126891415);
-                    c = md5_ii(c, d, a, b, x[i + 14], 15, -1416354905);
-                    b = md5_ii(b, c, d, a, x[i + 5], 21, -57434055);
-                    a = md5_ii(a, b, c, d, x[i + 12], 6, 1700485571);
-                    d = md5_ii(d, a, b, c, x[i + 3], 10, -1894986606);
-                    c = md5_ii(c, d, a, b, x[i + 10], 15, -1051523);
-                    b = md5_ii(b, c, d, a, x[i + 1], 21, -2054922799);
-                    a = md5_ii(a, b, c, d, x[i + 8], 6, 1873313359);
-                    d = md5_ii(d, a, b, c, x[i + 15], 10, -30611744);
-                    c = md5_ii(c, d, a, b, x[i + 6], 15, -1560198380);
-                    b = md5_ii(b, c, d, a, x[i + 13], 21, 1309151649);
-                    a = md5_ii(a, b, c, d, x[i + 4], 6, -145523070);
-                    d = md5_ii(d, a, b, c, x[i + 11], 10, -1120210379);
-                    c = md5_ii(c, d, a, b, x[i + 2], 15, 718787259);
-                    b = md5_ii(b, c, d, a, x[i + 9], 21, -343485551);
-                    a = safe_add(a, olda);
-                    b = safe_add(b, oldb);
-                    c = safe_add(c, oldc);
-                    d = safe_add(d, oldd);
-                }
-                return [a, b, c, d];
-            }
-            /*
-            * Calculate the HMAC-MD5, of a key and some data
-            */
-            function core_hmac_md5(key, data) {
-                var bkey = str2binl(key);
-                if (bkey.length > 16) {
-                    bkey = core_md5(bkey, key.length * chrsz);
-                }
-                var ipad = new Array(16), opad = new Array(16);
-                for (var i = 0; i < 16; i++) {
-                    ipad[i] = bkey[i] ^ 0x36363636;
-                    opad[i] = bkey[i] ^ 0x5C5C5C5C;
-                }
-                var hash = core_md5(ipad.concat(str2binl(data)), 512 + data.length * chrsz);
-                return core_md5(opad.concat(hash), 512 + 128);
-            }
-            /*
-            * These are the functions you'll usually want to call.
-            * They take string arguments and return either hex or base-64 encoded
-            * strings.
-            */
-            function hexdigest(s) {
-                return binl2hex(core_md5(str2binl(s), s.length * chrsz));
-            }
-            MD5.hexdigest = hexdigest;
-            function b64digest(s) {
-                return binl2b64(core_md5(str2binl(s), s.length * chrsz));
-            }
-            MD5.b64digest = b64digest;
-            function hash(s) {
-                return binl2str(core_md5(str2binl(s), s.length * chrsz));
-            }
-            MD5.hash = hash;
-            function hmac_hexdigest(key, data) {
-                return binl2hex(core_hmac_md5(key, data));
-            }
-            MD5.hmac_hexdigest = hmac_hexdigest;
-            function hmac_b64digest(key, data) {
-                return binl2b64(core_hmac_md5(key, data));
-            }
-            MD5.hmac_b64digest = hmac_b64digest;
-            function hmac_hash(key, data) {
-                return binl2str(core_hmac_md5(key, data));
-            }
-            MD5.hmac_hash = hmac_hash;
-        })(MD5 = Crypt.MD5 || (Crypt.MD5 = {}));
-    })(Crypt = Matrix.Crypt || (Matrix.Crypt = {}));
 })(Matrix || (Matrix = {}));
 /*
  * Copyright (C) Alexander Gnauck, AG-Software
@@ -15386,7 +15386,7 @@ var Matrix;
                     this.setAttribute("xmlns", Matrix.Namespaces.client);
                 }
                 return Stream;
-            })(Xmpp.Base.Stream);
+            }(Xmpp.Base.Stream));
             Client.Stream = Stream;
         })(Client = Xmpp.Client || (Xmpp.Client = {}));
     })(Xmpp = Matrix.Xmpp || (Matrix.Xmpp = {}));

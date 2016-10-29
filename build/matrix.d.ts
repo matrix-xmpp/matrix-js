@@ -1,10 +1,10 @@
 /// <reference path="Typings/ltxml.d.ts" />
 /// <reference path="typings/sax.d.ts" />
 /*!
-* Copyright (C) Alexander Gnauck, AG-Software
-* Web: http://www.ag-software.de
-* Email: alex@ag-software.net
-*/
+ * Copyright (C) Alexander Gnauck, AG-Software
+ * Web: http://www.ag-software.de
+ * Email: alex@ag-software.net
+ */
 declare module Matrix.Collections {
     class Queue<T> {
         /**
@@ -1388,6 +1388,14 @@ declare module Matrix.Sasl {
         private getMessage();
     }
 }
+declare module Matrix.Crypt.MD5 {
+    function hexdigest(s: string): string;
+    function b64digest(s: string): string;
+    function hash(s: string): string;
+    function hmac_hexdigest(key: any, data: any): string;
+    function hmac_b64digest(key: any, data: any): string;
+    function hmac_hash(key: any, data: any): string;
+}
 declare module Matrix.Sasl.Digest {
     class Step2 {
         private _Cnonce;
@@ -1603,14 +1611,6 @@ declare module Matrix.Xmpp.Stream {
         supportsBind: boolean;
         supportsSession: boolean;
     }
-}
-declare module Matrix.Crypt.MD5 {
-    function hexdigest(s: string): string;
-    function b64digest(s: string): string;
-    function hash(s: string): string;
-    function hmac_hexdigest(key: any, data: any): string;
-    function hmac_b64digest(key: any, data: any): string;
-    function hmac_hash(key: any, data: any): string;
 }
 declare module Matrix.Xmpp.Client {
     class Stream extends Xmpp.Base.Stream {
