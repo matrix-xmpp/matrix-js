@@ -6,3 +6,6 @@
 	* https://ltxmljs.codeplex.com/
 3)  sax.js
 	* ISC License
+4) ISO 8601 date parser
+	* https://github.com/csnover/js-iso8601
+	* MIT license.
