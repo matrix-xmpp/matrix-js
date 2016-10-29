@@ -8,14 +8,6 @@ QUnit.test("Digest Step1", function (assert) {
     equal(step1.nonce, "3677324771");
     equal(step1.charset, "utf-8");
     equal(step1.qop, "auth");
-
-    var rng = Matrix.Crypt.RandomNumberGenerator.create();
-
-    //var rng = new Matrix.Crypt.RandomNumberGenerator();
-    var bytes = new Array(24);
-    rng.getBytes(bytes);
-    var a = Matrix.Util.Functions.hexToString(bytes);
-    console.log('foo');
 }); 
 
 QUnit.test("Digest Step2", function (assert) {
@@ -29,26 +21,8 @@ QUnit.test("Digest Step2", function (assert) {
     proc.password = "secret";
     proc.server = "ag-software.net";
     
-    
-    if (step1.rspauth == null) {
-        var s2 = new Matrix.Sasl.Digest.Step2(step1, proc);
-        var message = s2.getMessage();
-        //System.Diagnostics.Debug.WriteLine(message);
-
-        //Assert.AreEqual(message, RESPONSE);
-    }
-    // Assert
-    equal(step1.nonce, "3677324771");
-    equal(step1.charset, "utf-8");
-    equal(step1.qop, "auth");
-
-    var rng = Matrix.Crypt.RandomNumberGenerator.create();
-
-    //var rng = new Matrix.Crypt.RandomNumberGenerator();
-    var bytes = new Array(24);
-    rng.getBytes(bytes);
-    var a = Matrix.Util.Functions.hexToString(bytes);
-    console.log('foo');
+    var s2 = new Matrix.Sasl.Digest.Step2(step1, proc);
+    equal(s2.nc, "00000001");
 }); 
 
 
@@ -71,8 +45,3 @@ QUnit.test("Test mechanism names", function (assert) {
     mech.saslMechanism = Matrix.Sasl.SaslMechanism.DigestMd5;
     assert.equal(mech.value, "DIGEST-MD5");
 });
-
-//QUnit.test("Test PlainPrecessor", function (assert) {
-//    var plain = new Matrix.Sasl.PlainProcessor();
-//    plain.
-//}); 

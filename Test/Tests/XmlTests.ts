@@ -40,18 +40,6 @@ QUnit.test("Test XmppXElement.loadXml()", function (assert) {
     assert.equal(el instanceof Matrix.Xmpp.Client.Message, true);
 });  
 
-//QUnit.test("Test Mechanisms", function (assert) {
-//    var xml1 = "<mechanisms xmlns='urn:ietf:params:xml:ns:xmpp-sasl' >";
-//    xml1 +=     "<mechanism>DIGEST-MD5</mechanism>";
-//    xml1 +=     "<mechanism>PLAIN</mechanism>";
-//    xml1 +="</mechanisms>";
-
-//    var el = Matrix.Xml.XmppXElement.loadXml(xml1);
-
-//    assert.equal(el instanceof Matrix.Xmpp.Client.Message, true);
-//}); 
-
-
 QUnit.test("Test Mechanisms", function (assert) {
     var xml1 = "<mechanisms xmlns='urn:ietf:params:xml:ns:xmpp-sasl' >";
     xml1 += "<mechanism>DIGEST-MD5</mechanism>";
@@ -85,27 +73,6 @@ QUnit.test("Test Bind", function (assert) {
     assert.equal(bind.jid.toString(), "alex@localhost/foo");
     
 }); 
-
-/*
-QUnit.test("Test Foo", function (assert) {
-    var xml1 = "<bind xmlns='urn:ietf:params:xml:ns:xmpp-bind'>";
-    xml1 += "<resource a='1' b='2'>someresource</resource>";
-    xml1 += "<jid>alex@localhost/foo</jid>";
-    xml1 += "</bind>";
-
-
-    var doc = Matrix.Xml.XmppXElement.parseXml(xml1);
-    //var el = Matrix.Xml.XmppXElement.test(xml1);
-    //var el = Matrix.Xml.XmppXElement.traverseChildNodes(doc);
-    var el = Matrix.Xml.XmppXElement.treeWalk(doc);
-    
-    
-    //var bind = <Matrix.Xmpp.Bind.Bind> el;
-
-    //assert.equal(bind.resource, "someresource");
-    //assert.equal(bind.jid.toString(), "alex@localhost/foo");
-}); 
-*/
 
 QUnit.test("Test Bosh body", function (assert) {
     var xml1 = "<body content='text/xml; charset=utf-8'";
@@ -142,19 +109,8 @@ QUnit.test("Test mixed content", function (assert) {
     xml1 += "</html>";
     xml1 += "</message>";
 
-    /*
-    var xml2 = "<p><em>Wow</em>, I&apos;m <span style='color:green'>green</span>";
-    xml2 += "with <strong>envy </strong>!";
-    xml2 += "</p>";
-    */
-
     var el = Matrix.Xml.XmppXElement.loadXml(xml1);
-    //var el = Matrix.Xml.XmppXElement.loadXml(xml2);
-
-    console.log(el.toString());
-
     assert.equal(el instanceof Matrix.Xmpp.Client.Message, true);
-
 });
 
 
@@ -196,6 +152,16 @@ QUnit.test("Test Muc Actor", function (assert) {
     var el = Matrix.Xml.XmppXElement.loadXml(xml1);
     assert.equal(el instanceof Matrix.Xmpp.Muc.User.Actor, true);
     var actor = <Matrix.Xmpp.Muc.User.Actor> el;
+    assert.equal(actor.nick, "Foo");
+    assert.equal(actor.jid.bare, "foo@jabber.org");
+});
+
+QUnit.test("LinqXml1", function (assert) {
+    var xml1 = "<actor xmlns='http://jabber.org/protocol/muc#user' jid='foo@jabber.org/Home' nick='Foo' />";
+
+    var el = Matrix.Xml.XmppXElement.loadXml(xml1);
+    assert.equal(el instanceof Matrix.Xmpp.Muc.User.Actor, true);
+    var actor = <Matrix.Xmpp.Muc.User.Actor>el;
     assert.equal(actor.nick, "Foo");
     assert.equal(actor.jid.bare, "foo@jabber.org");
 });
