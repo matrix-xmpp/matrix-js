@@ -10,13 +10,10 @@ module Matrix.Xml.Factory {
 
     import Dictionary = Collections.Dictionary;
 
-    //var _dict = new Dictionary<string, string>();
-
     var _dict = new Dictionary<string, { new (): XmppXElement; }>();
 
     var isFactoryInitialized = false;
     
-    //XmppXElement>(typee: { new (): T; }) 
     function buildKey(ns: string, localName: string): string
     {
         return "{" + ns + "}" + localName;
@@ -56,7 +53,7 @@ module Matrix.Xml.Factory {
 
     function initFactory() {
         // stream client
-        registerElement(Namespaces.stream, "strea,", Matrix.Xmpp.Client.Stream);
+        registerElement(Namespaces.stream, "stream", Matrix.Xmpp.Client.Stream);
         // stream features
         registerElement(Namespaces.stream, "features", Matrix.Xmpp.Stream.StreamFeatures);
         registerElement(Namespaces.featureIqRegister, "register", Matrix.Xmpp.Stream.Features.Register);
@@ -73,7 +70,7 @@ module Matrix.Xml.Factory {
         registerElement(Namespaces.session, "session", Matrix.Xmpp.Session.Session);
 
         registerElement(Namespaces.client, "iq", Matrix.Xmpp.Client.Iq);
-        registerElement(Namespaces.client, "presene", Matrix.Xmpp.Client.Presence);
+        registerElement(Namespaces.client, "presence", Matrix.Xmpp.Client.Presence);
         registerElement(Namespaces.client, "message", Matrix.Xmpp.Client.Message);
 
         registerElement(Namespaces.iqRoster, "item", Matrix.Xmpp.Roster.RosterItem);
@@ -90,7 +87,6 @@ module Matrix.Xml.Factory {
         // MUC
         registerElement(Namespaces.muc, "history", Matrix.Xmpp.Muc.History);
         registerElement(Namespaces.muc, "x", Matrix.Xmpp.Muc.X);
-        //registerElement(Namespaces.muc, "item", Matrix.Xmpp.Muc.Item);
         registerElement(Namespaces.xConference, "x", Matrix.Xmpp.Muc.Conference);
         registerElement(Namespaces.mucUser, "status", Matrix.Xmpp.Muc.User.Status);
         registerElement(Namespaces.mucUser, "continue", Matrix.Xmpp.Muc.User.Continue);
