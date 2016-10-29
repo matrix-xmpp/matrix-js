@@ -68,8 +68,6 @@ module Matrix {
     
 
         private _socket = null;
-        //private WEBSOCKET_URI_TPL: string = 'ws://{0}:{1}/xmpp-websocket';
-        
         private _xmppDomain: string;
         private _username: string;
         private _password: string;
@@ -115,12 +113,10 @@ module Matrix {
             this._socket.xmppClient = this;
 
             this._socket.onConnect.on((args: EventArgs) => {
-                //console.log('socket connected');
                 this.sendStreamHeader();
             });
 
             this._socket.onDisconnect.on((args: EventArgs) => {
-                //console.log('socket disconnected');
                 this.onClose.trigger(args);
             });
 
@@ -131,7 +127,6 @@ module Matrix {
                     var el = XmppXElement.loadXml(args.text);
                     this._xmppStreamParser.onStreamElement.trigger(new StanzaEventArgs(el));
                 }
-                //this._xmppStreamParser.write(args.text);
             });
 
             this._socket.onWriteData.on((args: TextEventArgs) => {
@@ -191,16 +186,7 @@ module Matrix {
             this._socket.connect();
         }
 
-        /*
-         * private triggerSendFunction() {
-            setTimeout( () => {
-                this.sendFunction();
-            }, this.SENDFUNC_INTERVAL);
-        }
-         */
-
         public close(): void {
-            // TODO
             this.sendStreamFooter();
             //this._socket.disconnect();
         }
@@ -236,7 +222,7 @@ module Matrix {
             });
 
             this._xmppStreamParser.onStreamEnd.on((args: EventArgs) => {
-                //console.log("onStreamEnd");
+                
             });        
         } 
         
@@ -266,7 +252,6 @@ module Matrix {
         }
 
         private sendStreamHeader() {
-            // build the stream header
             // build the stream header
             if (this.transport == Transport.Websocket) {
                 var open = new Xmpp.Framing.Open();
@@ -341,10 +326,7 @@ module Matrix {
             
             // trigger event
             this.onStreamFeatures.trigger(new StanzaEventArgs(features));
-            
-            //if (!IsAuthenticated && RegisterNewAccount && features.SupportsRegistration) {
-            //    GetRegistrationInformation(features);
-            //}
+         
             if (!this._streamFeatureHelper.sasl) {
             //    // Do Sasl authentication
                 this._saslHandler.startSasl(features);
@@ -377,9 +359,7 @@ module Matrix {
             bIq.generateId();
             bIq.type = IqType.Set;
             bIq.query.resource = this.resource;
-
-            // oovoo wants to send additional data with the bind request, so we have added 
-            // this event for them. Maybe its useful for other customers as well.
+            
             this.onBindStart.trigger(new IqEventArgs(bIq));
 
             this.iqFilter.sendIq(bIq, this.bindResult);

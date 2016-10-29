@@ -22,7 +22,7 @@ module Matrix.Xml.Factory {
     export function create<T>(c: { new (): T; }): T {
         return new c();
     }
-   
+
     /*
     export function create(className: string) {
         var arr = className.split(".");
@@ -92,7 +92,6 @@ module Matrix.Xml.Factory {
         registerElement(Namespaces.mucUser, "continue", Matrix.Xmpp.Muc.User.Continue);
         registerElement(Namespaces.mucUser, "actor", Matrix.Xmpp.Muc.User.Actor);
 
-
         isFactoryInitialized = true;
     }
 
@@ -106,7 +105,6 @@ module Matrix.Xml.Factory {
             var clazz = _dict.getValue(key);
             return create(clazz);
         }
-
         return new XmppXElement(ns, localName);
     }
     */
