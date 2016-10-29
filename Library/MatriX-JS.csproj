@@ -207,14 +207,32 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
     <TypeScriptTarget>ES5</TypeScriptTarget>
     <TypeScriptGeneratesDeclarations>True</TypeScriptGeneratesDeclarations>
-    <TypeScriptModuleKind>none</TypeScriptModuleKind>
+    <TypeScriptModuleKind>None</TypeScriptModuleKind>
     <TypeScriptRemoveComments>False</TypeScriptRemoveComments>
     <TypeScriptOutFile>matrix.js</TypeScriptOutFile>
+    <TypeScriptJSXEmit>None</TypeScriptJSXEmit>
+    <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+    <TypeScriptOutDir />
+    <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
+    <TypeScriptSourceMap>True</TypeScriptSourceMap>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
     <TypeScriptOutFile>matrix.js</TypeScriptOutFile>
     <TypeScriptGeneratesDeclarations>True</TypeScriptGeneratesDeclarations>
     <TypeScriptRemoveComments>False</TypeScriptRemoveComments>
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptJSXEmit>None</TypeScriptJSXEmit>
+    <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+    <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
+    <TypeScriptOutDir />
+    <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
+    <TypeScriptSourceMap>True</TypeScriptSourceMap>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
@@ -242,21 +260,23 @@
 "$(MSBuildBinPath)\msbuild.exe" "$(ProjectDir)YUICombine.msbuild" /p:ConfigurationName=$(ConfigurationName)
 
 echo Start Post build
+copy "$(SolutionDir)Library\matrix.js" "$(SolutionDir)build\matrix.js"
 copy "$(SolutionDir)Library\matrix.js" "$(SolutionDir)Test\matrix.js"
+copy "$(SolutionDir)Library\matrix.js" "$(SolutionDir)Examples\matrix.js"
 
-copy "$(SolutionDir)Library\matrix.combined.js" "$(SolutionDir)build\matrix.combined.js"
 copy "$(SolutionDir)Library\matrix.js.map" "$(SolutionDir)build\matrix.js.map"
-copy "$(SolutionDir)Library\matrix.d.ts" "$(SolutionDir)build\matrix.d.ts"
-
 copy "$(SolutionDir)Library\matrix.js.map" "$(SolutionDir)Test\matrix.js.map"
 copy "$(SolutionDir)Library\matrix.js.map" "$(SolutionDir)Examples\matrix.js.map"
 
+copy "$(SolutionDir)Library\matrix.min.js" "$(SolutionDir)build\matrix.min.js"
 copy "$(SolutionDir)Library\matrix.min.js" "$(SolutionDir)Test\matrix.min.js"
 copy "$(SolutionDir)Library\matrix.min.js" "$(SolutionDir)Examples\matrix.min.js"
 
+copy "$(SolutionDir)Library\matrix.d.ts" "$(SolutionDir)build\matrix.d.ts"
 copy "$(SolutionDir)Library\matrix.d.ts" "$(SolutionDir)Test\matrix.d.ts"
 copy "$(SolutionDir)Library\matrix.d.ts" "$(SolutionDir)Examples\matrix.d.ts"
 
+copy "$(SolutionDir)Library\matrix.combined.js" "$(SolutionDir)build\matrix.combined.js"
 copy "$(SolutionDir)Library\matrix.combined.js" "$(SolutionDir)Test\matrix.combined.js"
 copy "$(SolutionDir)Library\matrix.combined.js" "$(SolutionDir)Examples\matrix.combined.js"</PostBuildEvent>
   </PropertyGroup>

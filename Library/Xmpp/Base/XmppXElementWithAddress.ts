@@ -1,9 +1,11 @@
-﻿/*
+﻿
+/*
  * Copyright (C) Alexander Gnauck, AG-Software
  * Web: http://www.ag-software.de
  * Email: alex@ag-software.net * 
  */
 /// <reference path="../../Xml/XmppXElement.ts" />
+/// <reference path="../../Jid.ts" />
 module Matrix.Xmpp.Base {
     "use strict";
     import XmppXElement = Matrix.Xml.XmppXElement;

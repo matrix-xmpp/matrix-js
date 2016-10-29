@@ -3,7 +3,9 @@
  * Web: http://www.ag-software.de
  * Email: alex@ag-software.net * 
  */
-/// <reference path="../../crypt/randomnumbergenerator.ts" />
+/// <reference path="../../Crypt/RandomNumberGenerator.ts" />
+/// <reference path="../../Util/Functions.ts" />
+/// <reference path="../../Crypt/MD5.ts" />
 module Matrix.Sasl.Digest {
     "use strict";
     
