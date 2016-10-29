@@ -15,7 +15,7 @@ function getTimeStamp() : string {
     return now.toLocaleTimeString();
 }
 
-request: Matrix.Net.WebRequest;
+//request: Matrix.Net.WebRequest;
 $(document).ready(() => {
     
     client = new Matrix.XmppClient();

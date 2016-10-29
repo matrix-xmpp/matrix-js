@@ -12,7 +12,7 @@ function getTimeStamp() {
     var now = new Date();
     return now.toLocaleTimeString();
 }
-request: Matrix.Net.WebRequest;
+//request: Matrix.Net.WebRequest;
 $(document).ready(function () {
     client = new Matrix.XmppClient();
     client.onReadXml.on(function (args) {
@@ -63,11 +63,11 @@ function logEvent(name, text) {
 }
 $("#connect").click(function () {
     if ($('input[name=optionsTransport]:checked').val() == "bosh") {
-        client.transport = 1 /* Bosh */;
+        client.transport = Matrix.Transport.Bosh;
         client.uri = $('#uri').val();
     }
     else {
-        client.transport = 0 /* Websocket */;
+        client.transport = Matrix.Transport.Websocket;
         client.uri = $('#uriWS').val();
     }
     client.username = $('#username').val();
